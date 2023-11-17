@@ -242,7 +242,7 @@ h6 {
   width: 100%;
   height: 100vh;
   background: url("../img/landingPage.jpg") center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
