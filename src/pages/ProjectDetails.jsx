@@ -20,7 +20,7 @@ const ProjectDetails = () => {
               removed.
             </p>
 
-            <Link to="/#portfolio" className="btn btn-primary mt-3">
+            <Link to="/portfolio" className="btn btn-primary mt-3">
               <BiChevronLeft className="me-1" />
               Back to Portfolio
             </Link>
@@ -35,7 +35,7 @@ const ProjectDetails = () => {
       <Container>
         {/* Back Button */}
         <div className="mb-4">
-          <Link to="/#portfolio" className="project-back-link">
+          <Link to="/portfolio" className="project-back-link">
             <BiChevronLeft />
             Back to Portfolio
           </Link>

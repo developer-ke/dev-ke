@@ -30,7 +30,7 @@ const Portfolio = () => {
             <button
               key={category}
               className={`btn ${
-                filter === category ? "btn-primary" : "btn-outline-secondary"
+                filter === category ? "btn-info" : "btn-outline-secondary"
               } mx-1 mb-2`}
               onClick={() => setFilter(category)}
             >
@@ -47,7 +47,7 @@ const Portfolio = () => {
                 <Card.Body className="d-flex flex-column">
                   {/* Category */}
                   <div className="mb-3">
-                    <span className="badge bg-primary">{project.category}</span>
+                    <span className="badge bg-info">{project.category}</span>
                   </div>
 
                   {/* Title */}
@@ -76,15 +76,16 @@ const Portfolio = () => {
                     )}
                   </div>
 
-                  {/* Details Button */}
-                  <div className="mt-auto">
+                  <div className="mt-auto d-flex justify-content-between align-items-center">
+                    {" "}
                     <Link
                       to={`/project/${project.slug}`}
-                      className="btn btn-primary w-100"
+                      className="project-details-link"
                     >
-                      View Project
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
+                      {" "}
+                      <span>View Details</span>{" "}
+                      <i className="bi bi-arrow-up-right"></i>{" "}
+                    </Link>{" "}
                   </div>
                 </Card.Body>
               </Card>
