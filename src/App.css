@@ -166,7 +166,7 @@ body {
 .portfolio-navbar .portfolio-nav-text {
   display: inline-block !important;
 
-  color: #ffffff !important;
+  color: #ffff !important;
 
   font-size: 14px !important;
   font-weight: 500 !important;
@@ -2096,6 +2096,8 @@ SERVICES=========================================*/
 
 .service-card:hover .service-number {
   color: rgba(20, 157, 221, 0.1);
+  color: #149ddd;
+  transition: color 0.3s ease;
 }
 
 /* Title */
