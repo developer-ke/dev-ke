@@ -34,7 +34,7 @@ const Resume = () => {
 
         <Row className="g-5">
           {/* LEFT COLUMN */}
-          <Col lg={5} data-aos="fade-right">
+          <Col lg={5} data-aos="fade-up">
             {/* Summary */}
             <div className="resume-block">
               <div className="resume-heading">
@@ -137,7 +137,7 @@ const Resume = () => {
           </Col>
 
           {/* RIGHT COLUMN */}
-          <Col lg={7} data-aos="fade-left">
+          <Col lg={7} data-aos="fade-up">
             {/* Experience */}
             <div className="resume-block">
               <div className="resume-heading">

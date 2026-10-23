@@ -37,7 +37,7 @@ const About = () => {
       <Container>
         {/* Introduction */}
         <Row className="align-items-center about-intro">
-          <Col lg={5} className="mb-5 mb-lg-0" data-aos="fade-right">
+          <Col lg={5} className="mb-5 mb-lg-0" data-aos="fade-up">
             <div className="about-profile-card">
               <div className="profile-initials">AT</div>
 
@@ -54,7 +54,7 @@ const About = () => {
             </div>
           </Col>
 
-          <Col lg={7} data-aos="fade-left">
+          <Col lg={7} data-aos="fade-up">
             <span className="about-section-label">WHO I AM</span>
 
             <h2>
@@ -174,7 +174,7 @@ const About = () => {
 
         {/* Approach */}
         <Row className="about-approach align-items-center">
-          <Col lg={6} data-aos="fade-right">
+          <Col lg={6} data-aos="fade-up">
             <span className="about-section-label">MY APPROACH</span>
 
             <h2>
@@ -194,7 +194,7 @@ const About = () => {
             </p>
           </Col>
 
-          <Col lg={6} data-aos="fade-left">
+          <Col lg={6} data-aos="fade-up">
             <div className="about-values">
               <div className="about-value">
                 <BiCheckCircle />
