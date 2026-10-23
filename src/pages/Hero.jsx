@@ -65,7 +65,6 @@ const Hero = () => {
               <Link
                 to={"/portfolio"}
                 className="hero-btn hero-btn-primary text-decoration-none"
-                onClick={() => setExpanded(false)}
               >
                 <BiBriefcaseAlt2 />
                 View My Work
@@ -74,7 +73,6 @@ const Hero = () => {
               <Link
                 to="/contact"
                 className="hero-btn hero-btn-outline text-decoration-none"
-                onClick={() => setExpanded(false)}
               >
                 <BiCodeAlt />
                 Let's Work Together
