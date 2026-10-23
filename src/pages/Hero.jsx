@@ -8,7 +8,7 @@ import {
   BiBriefcaseAlt2,
   BiCheckCircle,
 } from "react-icons/bi";
-
+import { NavLink, Link } from "react-router-dom";
 const Hero = () => {
   const typedRef = useRef(null);
 
@@ -62,21 +62,23 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="hero-actions">
-              <Button
-                className="hero-btn hero-btn-primary"
-                onClick={() => scrollToSection("#portfolio")}
+              <Link
+                to={"/portfolio"}
+                className="hero-btn hero-btn-primary text-decoration-none"
+                onClick={() => setExpanded(false)}
               >
                 <BiBriefcaseAlt2 />
                 View My Work
-              </Button>
+              </Link>
 
-              <Button
-                className="hero-btn hero-btn-outline"
-                onClick={() => scrollToSection("#contact")}
+              <Link
+                to="/contact"
+                className="hero-btn hero-btn-outline text-decoration-none"
+                onClick={() => setExpanded(false)}
               >
                 <BiCodeAlt />
                 Let's Work Together
-              </Button>
+              </Link>
             </div>
 
             {/* Stats */}
