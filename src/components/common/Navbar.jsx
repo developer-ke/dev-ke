@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Navbar as BSNavbar, Nav, Container, Button } from "react-bootstrap";
+import { Navbar as BSNavbar, Nav, Container } from "react-bootstrap";
 
 import {
   BiHomeAlt,
@@ -33,7 +33,6 @@ const Navbar = () => {
       className="portfolio-navbar"
     >
       <Container>
-        {/* Brand */}
         <BSNavbar.Brand
           as={Link}
           to="/"
@@ -44,14 +43,12 @@ const Navbar = () => {
           <span className="brand-last">Torotich</span>
         </BSNavbar.Brand>
 
-        {/* Mobile toggle */}
         <BSNavbar.Toggle
           aria-controls="portfolio-navbar-nav"
           className="navbar-toggle"
         />
 
         <BSNavbar.Collapse id="portfolio-navbar-nav">
-          {/* Navigation */}
           <Nav className="portfolio-nav ms-auto align-items-lg-center">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -73,14 +70,13 @@ const Navbar = () => {
               );
             })}
 
-            {/* CTA */}
             <Link
               to="/contact"
               onClick={() => setExpanded(false)}
               className="navbar-cta"
             >
               Hire Me
-              <BiRightArrowAlt />
+              <BiRightArrowAlt className="cta-icon" />
             </Link>
           </Nav>
         </BSNavbar.Collapse>

@@ -16,75 +16,53 @@ body {
   color: #f3f4f5;
 }
 
-/* navbar */
-
 /* =========================================================
-   PREMIUM DARK PORTFOLIO NAVBAR
+   PORTFOLIO NAVBAR — PREMIUM DARK THEME
+   Background: #040b14
+   Accent:     #149ddd
 ========================================================= */
 
 .portfolio-navbar {
-  position: fixed !important;
+  position: sticky;
   top: 0;
-  left: 0;
+  z-index: 1030;
   width: 100%;
-
-  height: 76px;
-  min-height: 76px;
-
-  z-index: 9999 !important;
-
+  padding: 14px 24px;
   background: #040b14 !important;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  padding: 0 !important;
-
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(20, 157, 221, 0.18);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
-.portfolio-navbar .container {
-  height: 100%;
-
+/* Keep navbar contents aligned */
+.portfolio-navbar .container,
+.portfolio-navbar .container-fluid {
   display: flex;
   align-items: center;
 }
 
-
 /* =========================================================
-   BRAND
+   BRAND / LOGO
 ========================================================= */
 
 .portfolio-navbar .portfolio-brand {
-  display: flex !important;
+  display: inline-flex;
   align-items: center;
-
-  gap: 4px;
-
-  margin: 0;
-  padding: 0;
-
+  gap: 5px;
+  padding: 4px 0;
+  margin-right: 24px;
   color: #ffffff !important;
-
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 800;
-
-  letter-spacing: -0.6px;
-
-  text-decoration: none !important;
-
+  letter-spacing: 0.3px;
+  text-decoration: none;
   white-space: nowrap;
+  transition: color 0.25s ease;
+}
 
-  transition: opacity 0.25s ease;
+.portfolio-navbar .portfolio-brand:hover {
+  color: #149ddd !important;
 }
 
 .portfolio-navbar .brand-first {
@@ -95,407 +73,340 @@ body {
   color: #149ddd !important;
 }
 
-.portfolio-navbar .portfolio-brand:hover {
-  color: #ffffff !important;
-  opacity: 0.9;
-}
-
-
 /* =========================================================
-   NAVIGATION
+   NAVIGATION CONTAINER
 ========================================================= */
 
 .portfolio-navbar .portfolio-nav {
-  display: flex !important;
+  display: flex;
   align-items: center;
-
-  gap: 5px;
-
-  margin-left: auto;
-}
-
-
-/* =========================================================
-   NAV LINK
-========================================================= */
-
-.portfolio-navbar .portfolio-nav-link,
-.portfolio-navbar .portfolio-nav-link:visited {
-  position: relative;
-
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-
-  gap: 7px;
-
-  min-height: 44px;
-
-  margin: 0 !important;
-
-  padding: 10px 13px !important;
-
-  background: transparent !important;
-
-  border: 0 !important;
-  border-radius: 8px;
-
-  color: #ffffff !important;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  line-height: 1;
-
-  text-decoration: none !important;
-
-  opacity: 1 !important;
-  visibility: visible !important;
-
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-
-/* =========================================================
-   NAV TEXT
-========================================================= */
-
-.portfolio-navbar .portfolio-nav-text {
-  display: inline-block !important;
-
-  color: #ffff !important;
-
-  font-size: 14px !important;
-  font-weight: 500 !important;
-
-  line-height: 1 !important;
-
-  white-space: nowrap;
-
-  opacity: 1 !important;
-  visibility: visible !important;
-
-  -webkit-text-fill-color: #05a6e6;
-}
-
-
-/* =========================================================
-   NAV ICON
-========================================================= */
-
-.portfolio-navbar .nav-icon {
-  display: inline-block !important;
-
-  width: 18px;
-  height: 18px;
-
-  flex-shrink: 0;
-
-  color: #8998a7 !important;
-
-  font-size: 18px;
-
-  opacity: 1 !important;
-
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-
-/* =========================================================
-   HOVER
-========================================================= */
-
-.portfolio-navbar .portfolio-nav-link:hover {
-  color: #ffffff !important;
-
-  background: rgba(255, 255, 255, 0.055) !important;
-
-  transform: translateY(-1px);
-}
-
-.portfolio-navbar .portfolio-nav-link:hover .portfolio-nav-text {
-  color: #ffffff !important;
-
-  -webkit-text-fill-color: #ffffff;
-}
-
-.portfolio-navbar .portfolio-nav-link:hover .nav-icon {
-  color: #ffff !important;
-  transform: translateY(-1px);
-  -webkit-transform: translateY(-1px);
-  -moz-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
-  -o-transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   ACTIVE NAV ITEM
-========================================================= */
-
-.portfolio-navbar .portfolio-nav-link.active {
-  color: #ffffff !important;
-
-  background: rgba(20, 157, 221, 0.16) !important;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(20, 157, 221, 0.20),
-    0 4px 15px rgba(20, 157, 221, 0.07);
-}
-
-
-/* Active text */
-
-.portfolio-navbar .portfolio-nav-link.active .portfolio-nav-text {
-  color: #ffffff !important;
-
-  -webkit-text-fill-color: #ffffff;
-}
-
-
-/* Active icon */
-
-.portfolio-navbar .portfolio-nav-link.active .nav-icon {
-  color: #149ddd !important;
-
-  opacity: 1 !important;
-}
-
-
-/* Active blue indicator */
-
-.portfolio-navbar .portfolio-nav-link.active::after {
-  content: "";
-
-  position: absolute;
-
-  left: 12px;
-  right: 12px;
-
-  bottom: 3px;
-
-  height: 2px;
-
-  border-radius: 20px;
-
-  background: #149ddd !important;
-
-  box-shadow:
-    0 0 8px rgba(20, 157, 221, 0.65);
-}
-
-
-/* =========================================================
-   HIRE ME BUTTON
-========================================================= */
-
-.portfolio-navbar .navbar-cta {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-
   gap: 6px;
+}
 
-  min-height: 44px;
+/* =========================================================
+   NAVIGATION LINKS — DEFAULT STATE
+========================================================= */
 
-  margin-left: 12px;
-
-  padding: 0 18px;
-
-  border-radius: 8px;
-
-  background: #149ddd !important;
-
+.portfolio-navbar .portfolio-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent !important;
   color: #ffffff !important;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  line-height: 1;
-
   text-decoration: none !important;
-
   white-space: nowrap;
-
-  box-shadow:
-    0 6px 18px rgba(20, 157, 221, 0.18);
-
+  line-height: 1.2;
   transition:
-    background 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.portfolio-navbar .navbar-cta svg {
-  font-size: 18px;
+/* Ensure Bootstrap and React Router states don't hide links */
+.portfolio-navbar .portfolio-nav-link,
+.portfolio-navbar .portfolio-nav-link:focus,
+.portfolio-navbar .portfolio-nav-link:visited {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
 
+/* Navigation text */
+.portfolio-navbar .portfolio-nav-text {
+  display: inline-block !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease;
+}
+
+/* Navigation icons */
+.portfolio-navbar .nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #a8b2bd !important;
+  font-size: 17px;
+  line-height: 1;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* =========================================================
+   NAVIGATION HOVER
+========================================================= */
+
+.portfolio-navbar .portfolio-nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(20, 157, 221, 0.12) !important;
+  border-color: rgba(20, 157, 221, 0.18);
+  transform: translateY(-2px);
+}
+
+.portfolio-navbar .portfolio-nav-link:hover .portfolio-nav-text {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.portfolio-navbar .portfolio-nav-link:hover .nav-icon {
+  color: #149ddd !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ACTIVE NAVIGATION LINK
+   Works with React Router NavLink's .active class
+========================================================= */
+
+.portfolio-navbar .portfolio-nav-link.active {
+  color: #ffffff !important;
+  background: rgba(20, 157, 221, 0.16) !important;
+  border-color: rgba(20, 157, 221, 0.24);
+  box-shadow:
+    inset 0 0 0 1px rgba(20, 157, 221, 0.08),
+    0 4px 15px rgba(20, 157, 221, 0.06);
+}
+
+.portfolio-navbar .portfolio-nav-link.active .portfolio-nav-text {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 600;
+}
+
+.portfolio-navbar .portfolio-nav-link.active .nav-icon {
+  color: #149ddd !important;
+}
+
+/* Blue underline for the active page */
+.portfolio-navbar .portfolio-nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 3px;
+  height: 2px;
+  border-radius: 20px;
+  background: #149ddd;
+  box-shadow: 0 0 8px rgba(20, 157, 221, 0.65);
+}
+
+/* Active link should remain highlighted when hovered */
+.portfolio-navbar .portfolio-nav-link.active:hover {
+  background: rgba(20, 157, 221, 0.22) !important;
+  border-color: rgba(20, 157, 221, 0.35);
+}
+
+/* =========================================================
+   HIRE ME / CTA BUTTON
+========================================================= */
+
+.portfolio-navbar .navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 19px;
+  margin-left: 16px;
+  border: 1px solid #149ddd !important;
+  border-radius: 7px;
+  background: #149ddd !important;
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.portfolio-navbar .navbar-cta:hover,
+.portfolio-navbar .navbar-cta:focus {
+  background: #108bc4 !important;
+  border-color: #108bc4 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(20, 157, 221, 0.28);
+}
+
+.portfolio-navbar .cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  font-size: 16px;
   transition: transform 0.25s ease;
 }
 
-.portfolio-navbar .navbar-cta:hover {
-  background: #108bc4 !important;
-
-  color: #ffffff !important;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 25px rgba(20, 157, 221, 0.28);
-}
-
-.portfolio-navbar .navbar-cta:hover svg {
+.portfolio-navbar .navbar-cta:hover .cta-icon {
   transform: translateX(3px);
 }
 
-
 /* =========================================================
-   MOBILE TOGGLE
+   BOOTSTRAP NAVBAR TOGGLER
 ========================================================= */
 
-.portfolio-navbar .navbar-toggle {
-  border: 0 !important;
-
-  padding: 8px 9px;
-
+.portfolio-navbar .navbar-toggler {
+  padding: 7px 10px;
+  border: 1px solid rgba(20, 157, 221, 0.4) !important;
+  border-radius: 7px;
   background: transparent !important;
-
-  box-shadow: none !important;
-
-  outline: none !important;
-}
-
-.portfolio-navbar .navbar-toggle:focus,
-.portfolio-navbar .navbar-toggle:active {
   box-shadow: none !important;
   outline: none !important;
 }
 
-
-/* White hamburger */
+.portfolio-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(20, 157, 221, 0.15) !important;
+}
 
 .portfolio-navbar .navbar-toggler-icon {
-  filter: brightness(0) invert(1) !important;
+  filter: none;
 }
 
+/* Make toggler visible on the dark background */
+.portfolio-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 /* =========================================================
-   MOBILE
+   KEYBOARD ACCESSIBILITY
 ========================================================= */
 
-@media (max-width: 991px) {
+.portfolio-navbar .portfolio-nav-link:focus-visible,
+.portfolio-navbar .navbar-cta:focus-visible,
+.portfolio-navbar .portfolio-brand:focus-visible {
+  outline: 2px solid #149ddd;
+  outline-offset: 3px;
+}
 
+/* =========================================================
+   TABLETS AND MOBILE
+========================================================= */
+
+@media (max-width: 991.98px) {
   .portfolio-navbar {
-    height: auto !important;
-    min-height: 70px;
+    padding: 12px 16px;
   }
 
-  .portfolio-navbar .container {
-    height: auto;
-    min-height: 70px;
+  .portfolio-navbar .portfolio-brand {
+    font-size: 23px;
+    margin-right: 0;
+  }
+
+  .portfolio-navbar .navbar-collapse {
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid rgba(20, 157, 221, 0.16);
+    border-radius: 10px;
+    background: #07111e;
   }
 
   .portfolio-navbar .portfolio-nav {
-    width: 100%;
-
-    display: flex !important;
+    display: flex;
     flex-direction: column;
-
-    align-items: stretch !important;
-
-    gap: 4px;
-
-    margin-left: 0;
-
-    padding: 15px 0 18px;
+    align-items: stretch;
+    gap: 5px;
+    width: 100%;
   }
-
-
-  /* Mobile links */
 
   .portfolio-navbar .portfolio-nav-link {
-    width: 100%;
-
-    min-height: 46px;
-
+    display: flex;
     justify-content: flex-start;
-
-    padding: 13px 15px !important;
-
-    border-radius: 8px;
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 7px;
+    transform: none;
   }
 
-
-  /* Mobile active */
+  .portfolio-navbar .portfolio-nav-link:hover {
+    transform: none;
+    background: rgba(20, 157, 221, 0.12) !important;
+  }
 
   .portfolio-navbar .portfolio-nav-link.active {
     background: rgba(20, 157, 221, 0.16) !important;
-
-    box-shadow:
-      inset 0 0 0 1px rgba(20, 157, 221, 0.20);
   }
 
-
-  /* Mobile indicator */
-
+  /* Right-side indicator for the active mobile link */
   .portfolio-navbar .portfolio-nav-link.active::after {
     left: auto;
-    right: 10px;
-
+    right: 0;
     top: 50%;
     bottom: auto;
-
     width: 3px;
     height: 22px;
-
     transform: translateY(-50%);
-
     border-radius: 10px;
-
-    box-shadow:
-      0 0 8px rgba(20, 157, 221, 0.65);
   }
 
-
-  /* Mobile Hire Me */
-
   .portfolio-navbar .navbar-cta {
+    display: flex;
     width: 100%;
-
-    min-height: 46px;
-
-    margin: 8px 0 0;
-
-    padding: 0 15px;
+    margin: 12px 0 0;
+    padding: 13px 16px;
   }
 }
 
-
 /* =========================================================
-   SMALL MOBILE
+   SMALL MOBILE SCREENS
 ========================================================= */
 
-@media (max-width: 576px) {
-
-  .portfolio-navbar .portfolio-brand {
-    font-size: 20px;
+@media (max-width: 575.98px) {
+  .portfolio-navbar {
+    padding: 10px 12px;
   }
 
-  .portfolio-navbar {
-    padding: 0 5px !important;
+  .portfolio-navbar .portfolio-brand {
+    font-size: 21px;
+  }
+
+  .portfolio-navbar .navbar-toggler {
+    padding: 6px 8px;
   }
 
   .portfolio-navbar .portfolio-nav-text {
-    font-size: 14px !important;
+    font-size: 14px;
+  }
+
+  .portfolio-navbar .nav-icon {
+    font-size: 18px;
   }
 }
 
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
 
-/* end navbar */
+@media (prefers-reduced-motion: reduce) {
+
+  .portfolio-navbar,
+  .portfolio-navbar *,
+  .portfolio-navbar *::before,
+  .portfolio-navbar *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 .hero-section {
   min-height: 100vh;

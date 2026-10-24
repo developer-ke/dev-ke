@@ -8,7 +8,7 @@ export const personalInfo = {
         'API Integration Expert'
     ],
     birthday: '26 March 2000',
-    website: 'https://developer-ke.github.io/dev-ke/',
+    website: 'https://antonytorotich.my-board.org',
     phone: '+254 707 546 698',
     city: 'Nairobi, Kenya',
     email: 'antonytorotich@gmail.com',

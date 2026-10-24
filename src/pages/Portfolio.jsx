@@ -54,7 +54,7 @@ const Portfolio = () => {
                   <Card.Title className="fw-bold">{project.title}</Card.Title>
 
                   {/* Description */}
-                  <Card.Text className="text-muted">
+                  <Card.Text className="text-muted text-truncate">
                     {project.description}
                   </Card.Text>
 

@@ -257,6 +257,46 @@ export const projects = [
             'Hierarchical data relationships',
             'Administrative CRUD operations'
         ]
+    },
+
+    {
+        id: 12,
+        title: 'Tableo',
+        category: 'Web App',
+        slug: 'tableo',
+        description: 'A comprehensive hotel and restaurant management platform featuring QR code table ordering, online reservations, catering management, food ordering and delivery, dynamic website customization, and centralized administration.',
+        images: [
+            'tableo-dashboard.png',
+            'tableo-management.png',
+            'tableo-datatables.png'
+        ],
+        technologies: [
+            'Laravel',
+            'PHP',
+            'REST APIs',
+            'Yajra DataTables',
+            'Laravel Reverb',
+            'Bootstrap',
+            'SQL'
+        ],
+        features: [
+            'Interactive data tables with server-side processing',
+            'REST API integration',
+            'Real-time communication using Laravel Reverb',
+            'User and role management with secure access control',
+            'Dynamic branding and website customization',
+            'Social media account management and integration',
+            'QR code-based table ordering for restaurant guests',
+            'Online reservations for rooms, tables, and event spaces',
+            'Outside catering management for events and functions',
+            'Online food ordering and delivery management',
+            'Menu and category management',
+            'Administrative dashboard and content management',
+            'System configuration and deployment',
+            'Responsive Bootstrap interface',
+            'Database-driven operational reporting'
+        ],
+        liveUrl: 'https://tableo.my-board.org'
     }
 
 ]
