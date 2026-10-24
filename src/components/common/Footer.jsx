@@ -8,6 +8,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaArrowUp,
+  FaTaxi,
 } from "react-icons/fa";
 import { personalInfo } from "../../data/personalInfo";
 
@@ -33,7 +34,7 @@ const Footer = () => {
     {
       icon: FaTwitter,
       url: personalInfo.social.twitter,
-      label: "Twitter",
+      label: "Twitter(X)",
     },
     {
       icon: FaInstagram,
@@ -63,7 +64,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="footer-brand mb-3">
               <h3>
-                Antony <span>Torotich</span>
+                Antony <span className="text-info">Torotich</span>
               </h3>
 
               <p>
@@ -102,7 +103,8 @@ const Footer = () => {
         <Row className="align-items-center gy-3">
           <Col md={6} className="text-center text-md-start">
             <div className="footer-copyright">
-              © {year} <strong>Antony Torotich</strong>. All rights reserved.
+              © {year} <strong className="text-info">Antony Torotich</strong>.
+              All rights reserved.
             </div>
           </Col>
 

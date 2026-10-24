@@ -70,7 +70,9 @@ const Services = () => {
         {/* Section Header */}{" "}
         <div className="section-title text-center mb-5">
           {" "}
-          <span className="section-eyebrow">WHAT I DO</span>{" "}
+          <span className="section-eyebrow hero-availability">
+            WHAT I DO
+          </span>{" "}
           <h2>
             {" "}
             Services That <span>Deliver</span>{" "}

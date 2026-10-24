@@ -18,7 +18,7 @@ const About = () => {
       <div className="about-hero">
         <Container>
           <div className="about-hero-content text-center">
-            <span className="about-eyebrow">ABOUT ME</span>
+            <span className="about-eyebrow hero-availability">ABOUT ME</span>
 
             <h1>
               Building Digital Solutions
@@ -53,9 +53,10 @@ const About = () => {
               </div>
             </div>
           </Col>
-
           <Col lg={7} data-aos="fade-up">
-            <span className="about-section-label">WHO I AM</span>
+            <span className="about-section-label hero-availability">
+              WHO I AM
+            </span>
 
             <h2>
               Developer. Problem Solver.
@@ -95,7 +96,7 @@ const About = () => {
         {/* What I Do */}
         <div className="about-section-block">
           <div className="text-center mb-5">
-            <span className="about-eyebrow">WHAT I DO</span>
+            <span className="about-eyebrow hero-availability">WHAT I DO</span>
 
             <h2 className="section-heading">
               Turning Ideas Into
@@ -175,7 +176,9 @@ const About = () => {
         {/* Approach */}
         <Row className="about-approach align-items-center">
           <Col lg={6} data-aos="fade-up">
-            <span className="about-section-label">MY APPROACH</span>
+            <span className="about-section-label hero-availability">
+              MY APPROACH
+            </span>
 
             <h2>
               More Than Just

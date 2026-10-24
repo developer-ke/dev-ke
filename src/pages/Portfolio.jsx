@@ -16,6 +16,7 @@ const Portfolio = () => {
       <Container>
         {/* Section Header */}
         <div className="section-title text-center mb-5">
+          <span className="hero-availability">Explore All My Portfolio</span>
           <h2>Portfolio</h2>
           <p>
             A curated showcase of my work as a full-stack developer, featuring
@@ -47,7 +48,9 @@ const Portfolio = () => {
                 <Card.Body className="d-flex flex-column">
                   {/* Category */}
                   <div className="mb-3">
-                    <span className="badge bg-info">{project.category}</span>
+                    <span className="hero-availability">
+                      {project.category}
+                    </span>
                   </div>
 
                   {/* Title */}

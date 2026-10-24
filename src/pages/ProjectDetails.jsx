@@ -33,6 +33,9 @@ const ProjectDetails = () => {
   return (
     <section className="project-details py-5">
       <Container>
+        <div className="text-center">
+          <span className="hero-availability">{project.title}</span>
+        </div>
         {/* Back Button */}
         <div className="mb-4">
           <Link to="/portfolio" className="project-back-link">

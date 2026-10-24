@@ -19,7 +19,7 @@ const Resume = () => {
       <Container>
         {/* Section Header */}
         <div className="section-title text-center mb-5">
-          <span className="section-eyebrow">MY JOURNEY</span>
+          <span className="section-eyebrow hero-availability">MY JOURNEY</span>
 
           <h2>
             Resume & <span>Experience</span>

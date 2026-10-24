@@ -16,6 +16,9 @@ const Contact = () => {
       <Container>
         {/* Section Header */}
         <div className="section-title text-center mb-5">
+          <span className="hero-availability text-text-capitalize">
+            You Can Contact Me Now
+          </span>
           <h2>
             Let's <span style={{ color: "#149ddd" }}>Connect</span>
           </h2>
@@ -115,7 +118,9 @@ const Contact = () => {
 
               {/* Social Links */}
               <div className="text-center">
-                <p className="text-muted small mb-3">You can also find me on</p>
+                <p className="text-muted small mb-3 ">
+                  You can also find me on
+                </p>
 
                 <div className="contact-socials">
                   <a
