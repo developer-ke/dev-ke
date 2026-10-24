@@ -83,7 +83,7 @@ const Portfolio = () => {
                     {" "}
                     <Link
                       to={`/project/${project.slug}`}
-                      className="project-details-link"
+                      className="project-details-link hero-availability"
                     >
                       {" "}
                       <span>View Details</span>{" "}
