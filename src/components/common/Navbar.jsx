@@ -12,6 +12,7 @@ import {
   BiServer,
   BiEnvelope,
   BiRightArrowAlt,
+  BiCodeAlt,
 } from "react-icons/bi";
 
 const Navbar = () => {
@@ -20,6 +21,7 @@ const Navbar = () => {
   const navItems = [
     { to: "/", label: "Home", icon: BiHomeAlt },
     { to: "/about", label: "About", icon: BiUser },
+    { to: "/skills", label: "Skills", icon: BiCodeAlt },
     { to: "/resume", label: "Resume", icon: BiFile },
     { to: "/portfolio", label: "Portfolio", icon: BiBriefcase },
     { to: "/services", label: "Services", icon: BiServer },
