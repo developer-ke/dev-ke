@@ -11,6 +11,7 @@ import {
   FaTaxi,
 } from "react-icons/fa";
 import { personalInfo } from "../../data/personalInfo";
+import logo from "/src/assets/logo.svg"; // Adjust path if Navbar.jsx is in another folder
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -64,11 +65,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="footer-brand mb-3">
               <h3>
-                <img
-                  src="/src/assets/logo.svg"
-                  alt="Antony Torotich"
-                  width="400"
-                />
+                <img src={logo} alt="Antony Torotich" width="400" />
               </h3>
 
               <p>
