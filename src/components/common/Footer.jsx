@@ -64,7 +64,11 @@ const Footer = () => {
             {/* Brand */}
             <div className="footer-brand mb-3">
               <h3>
-                Antony <span className="text-info">Torotich</span>
+                <img
+                  src="/src/assets/logo.svg"
+                  alt="Antony Torotich"
+                  width="400"
+                />
               </h3>
 
               <p>

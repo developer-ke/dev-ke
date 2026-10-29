@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Navbar as BSNavbar, Nav, Container } from "react-bootstrap";
 
+import logo from "/src/assets/logo.svg"; // Adjust path if Navbar.jsx is in another folder
+
 import {
   BiHomeAlt,
   BiUser,
@@ -39,13 +41,13 @@ const Navbar = () => {
           onClick={() => setExpanded(false)}
           className="portfolio-brand"
         >
-          <span className="brand-first">Antony</span>
-          <span className="brand-last">Torotich</span>
+          <img src={logo} alt="AntonyTorotich" className="portfolio-logo" />
         </BSNavbar.Brand>
 
         <BSNavbar.Toggle
           aria-controls="portfolio-navbar-nav"
           className="navbar-toggle"
+          aria-label="Toggle navigation"
         />
 
         <BSNavbar.Collapse id="portfolio-navbar-nav">

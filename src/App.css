@@ -22,17 +22,31 @@ body {
    Accent:     #149ddd
 ========================================================= */
 
-.portfolio-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  width: 100%;
-  padding: 14px 24px;
-  background: #040b14 !important;
-  border-bottom: 1px solid rgba(20, 157, 221, 0.18);
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease;
+.portfolio-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+.portfolio-logo {
+  display: block;
+  width: 190px;
+  height: 48px;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform 0.25s ease;
+}
+
+.portfolio-brand:hover .portfolio-logo {
+  transform: scale(1.03);
+}
+
+@media (max-width: 576px) {
+  .portfolio-logo {
+    width: 155px;
+    height: 42px;
+  }
 }
 
 /* Keep navbar contents aligned */
@@ -66,7 +80,7 @@ body {
 }
 
 .portfolio-navbar .brand-first {
-  color: #ffffff !important;
+  color: black !important;
 }
 
 .portfolio-navbar .brand-last {
@@ -2724,5 +2738,172 @@ SERVICES=========================================*/
   .back-to-top {
     position: static;
     margin: 25px auto 0;
+  }
+}
+
+
+/* =========================================================
+   FINAL NAVBAR + FOOTER BRAND OVERRIDES
+   These overrides update only the navbar/footer branding.
+   All other page and section styles above remain unchanged.
+========================================================= */
+
+/* Navbar logo image */
+.portfolio-navbar {
+  background-color: #040b14;
+}
+
+.portfolio-navbar .portfolio-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0;
+  padding: 0;
+  margin-right: 24px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.portfolio-navbar .portfolio-brand:hover,
+.portfolio-navbar .portfolio-brand:focus {
+  color: #ffffff !important;
+}
+
+.portfolio-navbar .portfolio-logo {
+  display: block;
+  width: 190px;
+  height: 60px;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform 0.25s ease;
+}
+
+.portfolio-navbar .portfolio-brand:hover .portfolio-logo {
+  transform: scale(1.03);
+}
+
+/* Prevent old text-brand rules from affecting the logo */
+.portfolio-navbar .portfolio-brand .brand-first,
+.portfolio-navbar .portfolio-brand .brand-last {
+  display: none;
+}
+
+
+/* Show navbar text labels */
+.portfolio-navbar .portfolio-nav-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.portfolio-nav-link:hover {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: #0d6efd;
+}
+
+.portfolio-navbar .portfolio-nav-text {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 13px;
+  font-weight: 500;
+  color: #040b14 !important;
+}
+
+.portfolio-navbar .nav-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 17px;
+}
+
+/* Navbar spacing */
+.portfolio-navbar .portfolio-nav {
+  gap: 12px;
+}
+
+.portfolio-navbar .portfolio-nav-link {
+  padding: 10px 8px;
+}
+
+/* Keep the Hire Me button readable */
+.portfolio-navbar .navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Mobile navbar */
+@media (max-width: 991.98px) {
+  .portfolio-navbar .portfolio-nav {
+    align-items: stretch !important;
+    gap: 4px;
+    padding: 12px 0;
+  }
+
+  .portfolio-navbar .portfolio-nav-link {
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
+
+  .portfolio-navbar .portfolio-nav-text {
+    display: inline !important;
+  }
+
+  .portfolio-navbar .navbar-cta {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}
+
+/* Footer branding supports the same logo while preserving footer layout */
+.portfolio-footer .footer-brand {
+  text-align: center;
+}
+
+.portfolio-footer .footer-brand .footer-logo {
+  display: block;
+  width: min(220px, 80%);
+  height: 54px;
+  object-fit: contain;
+  margin: 0 auto 14px;
+}
+
+.portfolio-footer .footer-brand h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.portfolio-footer .footer-brand h3 span {
+  color: #149ddd;
+}
+
+/* Responsive branding */
+@media (max-width: 991.98px) {
+  .portfolio-navbar .portfolio-brand {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-navbar .portfolio-logo {
+    width: 155px;
+    height: 42px;
+  }
+
+  .portfolio-footer .footer-brand .footer-logo {
+    width: min(190px, 80%);
+    height: 48px;
   }
 }
